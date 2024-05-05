@@ -7,6 +7,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
+    "release": "npm run build && changeset publish",
     "lint": "npm run build"
   },
   "repository": {
