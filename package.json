@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsup",
     "release": "npm run build && changeset publish",
-    "lint": "npm run build"
+    "lint": "tsc"
   },
   "repository": {
     "type": "git",
