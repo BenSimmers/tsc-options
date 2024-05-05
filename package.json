@@ -9,6 +9,10 @@
     "build": "tsup",
     "lint": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenSimmers/tsc-options.git"
+  },
   "keywords": [
     "functional",
     "programming",
