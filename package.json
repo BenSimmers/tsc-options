@@ -6,7 +6,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "lint": "npm run build"
   },
   "keywords": [
     "functional",
@@ -18,6 +19,7 @@
   "author": "Benjamin Simmers",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
