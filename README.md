@@ -86,6 +86,34 @@ Represents an optional record where each value is of type Partial\<Option\<T>>.
 
 - **Record\<string, Partial\<Option\<T>>>**
 
+# Result
+
+**export type Result<T, E> = Ok<T> | Err<E>;**
+
+- Represents the result of an operation that can either succeed with a value of type T or fail with an error of type E.
+
+```typescript
+const result: Result<number, string> = { type: "ok", value: 42 };
+```
+
+## OK Type
+
+- **type Ok<T> = { type: "ok"; value: T };**
+  Creates an OK type that wraps the value.
+
+```typescript
+const ok: Ok<number> = { type: "ok", value: 42 };
+```
+
+## Error Type
+
+- **type Err<E> = { type: "err"; error: E };**
+  Creates an error type that wraps the error value.
+
+```typescript
+const error: Err<string> = { type: "err", error: "An error occurred" };
+```
+
 # Methods - Optional Utilities Documentation
 
 ## Creation Functions

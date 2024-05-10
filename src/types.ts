@@ -79,3 +79,30 @@ export type Request = {
   /** The body of the request. */
   body?: string;
 };
+
+/**
+ * Ok type for Result.
+ * @template T - The type of the value.
+ * @typedef {Object} Ok
+ * @property {string} type - The type identifier indicating success ("ok").
+ * @property {T} value - The value wrapped by Ok.
+ */
+export type Result<T, E> = Ok<T> | Err<E>;
+
+/**
+ * Ok type for Result.
+ * @template T - The type of the value.
+ * @typedef {Object} Ok
+ * @property {string} type - The type identifier indicating success ("ok").
+ * @property {T} value - The value wrapped by Ok.
+ */
+type Ok<T> = { type: "ok"; value: T };
+
+/**
+ * Err type for Result.
+ * @template E - The type of the error.
+ * @typedef {Object} Err
+ * @property {string} type - The type identifier indicating error ("err").
+ * @property {E} error - The error wrapped by Err.
+ */
+type Err<E> = { type: "err"; error: E };
